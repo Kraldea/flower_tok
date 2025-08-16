@@ -995,3 +995,35 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .flower--4 .flower__leaf {
   background-image: linear-gradient(to top, #9370DB, #DA70D6);
 }
+.overlay-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0); /* transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  pointer-events: none; /* lets clicks pass through */
+}
+
+.overlay-banner h1 {
+  font-size: 4.5rem;
+  font-family: 'Fredoka One'; /* Try 'Pacifico' or 'Quicksand' too */
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: None;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: pulse 3s infinite;
+}
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
